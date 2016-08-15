@@ -1,17 +1,20 @@
 package com.epam.botor;
 
-import org.springframework.beans.factory.BeanFactory;
-import org.springframework.beans.factory.xml.XmlBeanFactory;
-import org.springframework.core.io.ClassPathResource;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.epam.botor.domain.Jedi;
 
 public class App {
 
 	public static void main(String[] args) {
-		BeanFactory beanFactory = new XmlBeanFactory(new ClassPathResource("beans.xml"));
-		Jedi jedi = beanFactory.getBean("joda", Jedi.class);
-		System.out.println(jedi.fight());
+		
+		try(ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("beans.xml")){
+			Jedi jedi = context.getBean("joda", Jedi.class);
+			System.out.println(jedi.fight());
+		};
+		
+		
 
 	}
 }
