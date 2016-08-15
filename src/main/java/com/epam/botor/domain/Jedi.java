@@ -4,8 +4,8 @@ public class Jedi {
 
 	private final LighSabre lighsabre;
 
-	public Jedi() {
-		this.lighsabre = new LighSabre("LS", 100);
+	public Jedi(LighSabre lighSabre) {
+		this.lighsabre = lighSabre;
 	}
 
 	public String fight() {

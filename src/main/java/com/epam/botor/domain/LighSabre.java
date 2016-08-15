@@ -14,16 +14,10 @@ public class LighSabre {
 		return "bumbbumbbbubmm";
 	}
 
-	/**
-	 * @return the name
-	 */
 	public String getName() {
 		return name;
 	}
 
-	/**
-	 * @return the damage
-	 */
 	public int getDamage() {
 		return damage;
 	}

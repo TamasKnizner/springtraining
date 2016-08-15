@@ -17,6 +17,11 @@
 	</properties>
 
 	<dependencies>
-
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-beans -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+			<version>4.3.2.RELEASE</version>
+		</dependency>
 	</dependencies>
 </project>
